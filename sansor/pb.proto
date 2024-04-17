@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "./pb";
+package pb;
+
+service Sansor {
+  rpc TextReview(TextReviewRequest) returns (TextReviewResponse) {}
+}
+
+message TextReviewRequest {
+  string text = 1;
+}
+
+message TextReviewResponse {
+  bool banned = 2;
+}
