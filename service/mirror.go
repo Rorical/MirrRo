@@ -161,5 +161,5 @@ func Listen(configPath string) error {
 		return err
 	}
 	http.HandleFunc("/", router.Handle)
-	return http.ListenAndServe("127.0.0.1:8999", nil)
+	return http.ListenAndServe(cfg.Listen, nil)
 }
